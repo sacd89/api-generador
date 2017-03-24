@@ -110,6 +110,7 @@ export function patch(req, res) {
 
 // Deletes a Thing from the DB
 export function destroy(req, res) {
+  console.log("IDDDDDD"+req.params.id)
   return Thing.findById(req.params.id).exec()
     .then(handleEntityNotFound(res))
     .then(removeEntity(res))

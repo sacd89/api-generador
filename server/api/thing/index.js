@@ -7,9 +7,9 @@ var router = express.Router();
 
 router.get('/', controller.index);
 router.get('/:id', controller.show);
-router.post('/', controller.create);
-router.put('/:id', controller.upsert);
-router.patch('/:id', controller.patch);
-router.delete('/:id', controller.destroy);
+router.post('/post', controller.create);
+router.put('/put/:id', controller.upsert);
+router.patch('/patch/:id', controller.patch);
+router.delete('/delete/:id', controller.destroy);
 
 module.exports = router;

@@ -34,7 +34,7 @@ export class MainController {
 
   addThing() {
     if(this.newThing) {
-      this.$http.post('/api/things', {
+      this.$http.post('/api/things/post', {
         name: this.newThing
       }).then(response =>{
         this.refresh();
@@ -44,7 +44,7 @@ export class MainController {
   }
 
   deleteThing(thing) {
-    this.$http.delete(`/api/things/${thing._id}`).then(response =>{
+    this.$http.delete(`/api/things/delete/${thing._id}`).then(response =>{
       this.refresh();
     });
   }
